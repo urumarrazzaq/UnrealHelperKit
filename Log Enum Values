@@ -1,0 +1,13 @@
+UENUM(BlueprintType)
+enum class EAIStates : uint8
+{
+    None                UMETA(DisplayName = "None"),
+    Idle                UMETA(DisplayName = "Idle"),
+    Patrolling          UMETA(DisplayName = "Patrolling"),
+    Chasing             UMETA(DisplayName = "Chasing"),
+    Investigating       UMETA(DisplayName = "Investigating"),
+    Attacking           UMETA(DisplayName = "Attacking"),
+    Dead                UMETA(DisplayName = "Dead")
+};
+
+UE_LOG(LogTemp, Warning, TEXT("SetAIState: %s"), *UEnum::GetValueAsString(AIState));
